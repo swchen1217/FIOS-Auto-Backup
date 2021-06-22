@@ -6,7 +6,7 @@ TIME=$(date +"%Y-%m-%d-%H-%M-%S")
 
 #rm ./data-tmp/Database-5min/*
 mysqldump \
-	-u laravel -pc8octwQfNDMVT2QU -n -t \
+	-u {{USERNAME}} -p{{PASSWORD}} -n -t \
 	fios balances orders money_logs \
 	> ./up-tmp/Database-5min/Database-5min.sql
 openssl rand -base64 64 \
